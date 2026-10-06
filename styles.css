@@ -1,0 +1,90 @@
+:root {
+  --bg: #ffffff;
+  --alt: #f3f5f9;
+  --text: #1c2230;
+  --muted: #5a6478;
+  --accent: #4f46e5;
+  --accent-text: #ffffff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #12151c;
+    --alt: #1a1f2a;
+    --text: #e8ebf2;
+    --muted: #9aa4b8;
+    --accent: #818cf8;
+    --accent-text: #12151c;
+  }
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 20px;
+  background: var(--bg);
+  border-bottom: 1px solid var(--alt);
+}
+
+.logo { font-weight: 700; font-size: 1.25rem; color: var(--accent); text-decoration: none; }
+nav a { margin-left: 16px; color: var(--text); text-decoration: none; }
+nav a:hover { color: var(--accent); }
+
+.hero {
+  text-align: center;
+  padding: 96px 20px;
+  background: var(--alt);
+}
+.hero h1 { font-size: clamp(2rem, 6vw, 3.5rem); margin: 0 0 12px; }
+.hero p { color: var(--muted); margin: 0 0 28px; }
+
+.section { max-width: 960px; margin: 0 auto; padding: 64px 20px; }
+.section.alt { max-width: none; background: var(--alt); }
+.section.alt > * { max-width: 960px; margin-left: auto; margin-right: auto; }
+.section h2 { margin-top: 0; }
+
+.cards { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+.card { background: var(--bg); padding: 20px; border-radius: 12px; border: 1px solid var(--alt); }
+.card h3 { margin-top: 0; }
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  border: 0;
+  border-radius: 8px;
+  background: var(--accent);
+  color: var(--accent-text);
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+}
+.btn:hover { opacity: 0.9; }
+
+.form { display: grid; gap: 14px; max-width: 480px; }
+.form label { display: grid; gap: 6px; font-weight: 500; }
+.form input, .form textarea {
+  padding: 10px 12px;
+  border: 1px solid var(--muted);
+  border-radius: 8px;
+  background: var(--bg);
+  color: var(--text);
+  font: inherit;
+}
+.form .btn { justify-self: start; }
+
+.site-footer { text-align: center; padding: 24px 20px; color: var(--muted); border-top: 1px solid var(--alt); }

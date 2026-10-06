@@ -3,51 +3,75 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Milodon</title>
+  <title>Milodon | Cursos de Estética en Video</title>
+  <meta name="description" content="Cursos de estética en video, a tu ritmo y de por vida.">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="site-header">
     <a class="logo" href="#inicio">Milodon</a>
     <nav>
-      <a href="#sobre-mi">Sobre mí</a>
-      <a href="#servicios">Servicios</a>
-      <a href="#contacto">Contacto</a>
+      <a href="#cursos">Cursos</a>
+      <a href="#incluye">Qué incluye</a>
+      <a href="#preguntas">Preguntas</a>
+      <a class="btn btn-sm" href="#contacto">Contacto</a>
     </nav>
   </header>
 
   <main>
     <section id="inicio" class="hero">
-      <h1>Bienvenido a Milodon</h1>
-      <p>Una página sencilla, rápida y lista para personalizar.</p>
-      <a class="btn" href="#contacto">Contáctanos</a>
+      <p class="eyebrow">Cursos de estética en video</p>
+      <h1>Aprende estética profesional, a tu ritmo</h1>
+      <p class="lead">Clases paso a paso en video, acceso inmediato y de por vida. Domina técnicas de cuidado facial y corporal desde casa.</p>
+      <a class="btn" href="#cursos">Ver cursos</a>
     </section>
 
-    <section id="sobre-mi" class="section">
-      <h2>Sobre mí</h2>
-      <p>Aquí puedes contar quién eres, qué haces y qué te hace diferente. Edita este texto en <code>index.html</code>.</p>
-    </section>
-
-    <section id="servicios" class="section alt">
-      <h2>Servicios</h2>
+    <section id="cursos" class="section">
+      <h2>Nuestros cursos</h2>
       <div class="cards">
         <article class="card">
-          <h3>Servicio uno</h3>
-          <p>Describe brevemente lo que ofreces.</p>
+          <span class="tag">Principiante</span>
+          <h3>Limpieza facial profesional</h3>
+          <p>Protocolo completo, productos y manejo de distintos tipos de piel.</p>
+          <p class="price">$00 <small>USD</small></p>
+          <a class="btn btn-outline" href="#contacto">Quiero este curso</a>
+        </article>
+        <article class="card featured">
+          <span class="tag">Más vendido</span>
+          <h3>Cosmetología y cuidado de la piel</h3>
+          <p>Análisis de piel, tratamientos y rutinas personalizadas para tus clientes.</p>
+          <p class="price">$00 <small>USD</small></p>
+          <a class="btn" href="#contacto">Quiero este curso</a>
         </article>
         <article class="card">
-          <h3>Servicio dos</h3>
-          <p>Describe brevemente lo que ofreces.</p>
-        </article>
-        <article class="card">
-          <h3>Servicio tres</h3>
-          <p>Describe brevemente lo que ofreces.</p>
+          <span class="tag">Intermedio</span>
+          <h3>Masaje y tratamientos corporales</h3>
+          <p>Técnicas reductoras, drenaje y relajación explicadas en detalle.</p>
+          <p class="price">$00 <small>USD</small></p>
+          <a class="btn btn-outline" href="#contacto">Quiero este curso</a>
         </article>
       </div>
     </section>
 
-    <section id="contacto" class="section">
-      <h2>Contacto</h2>
+    <section id="incluye" class="section alt">
+      <h2>Qué incluye cada curso</h2>
+      <ul class="features">
+        <li><strong>Videos en HD</strong> con demostraciones claras y cercanas.</li>
+        <li><strong>Acceso de por vida</strong> para ver las clases cuando quieras.</li>
+        <li><strong>Material descargable</strong> con guías y listas de productos.</li>
+        <li><strong>Certificado</strong> al finalizar el curso.</li>
+      </ul>
+    </section>
+
+    <section id="preguntas" class="section">
+      <h2>Preguntas frecuentes</h2>
+      <details><summary>¿Cómo recibo el curso?</summary><p>Después de tu compra recibes acceso inmediato por correo.</p></details>
+      <details><summary>¿Necesito experiencia previa?</summary><p>No. Hay cursos desde nivel principiante.</p></details>
+      <details><summary>¿Por cuánto tiempo tengo acceso?</summary><p>El acceso es de por vida, incluidas futuras actualizaciones.</p></details>
+    </section>
+
+    <section id="contacto" class="section alt">
+      <h2>¿Dudas o quieres comprar?</h2>
       <form id="form" class="form">
         <label>Nombre <input type="text" name="nombre" required></label>
         <label>Correo <input type="email" name="correo" required></label>
@@ -66,7 +90,7 @@
     document.getElementById('anio').textContent = new Date().getFullYear();
     document.getElementById('form').addEventListener('submit', function (e) {
       e.preventDefault();
-      document.getElementById('estado').textContent = '¡Gracias! Tu mensaje fue recibido.';
+      document.getElementById('estado').textContent = '¡Gracias! Te responderemos pronto.';
       this.reset();
     });
   </script>
